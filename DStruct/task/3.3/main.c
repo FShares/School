@@ -18,10 +18,6 @@ typedef struct _tag_SeqList
     TSeqListNode* node;
 } TSeqList;
 
-/*
- * 第一题
- */
-
 SeqList * SeqList_Create(int capacity)      //O(n)
 {
     TSeqList *ret = NULL;
@@ -86,6 +82,59 @@ SeqListNode* SeqList_Get(SeqList* list, int pos) // O(1)
 
     return ret;
 }
+
+/*******************************************************************
+* 删除顺序表结点
+* 返回NULL表示删除失败
+* 返回非NULL表示删除成功
+********************************************************************/
+SeqListNode* SeqList_Delete(SeqList* list, int pos) // O(n)
+{
+    TSeqList* sList = (TSeqList*)list;
+    SeqListNode* ret = SeqList_Get(list, pos);
+    int i = 0;
+
+    // 1. 判断线性表是否合法
+    // 2. 判断删除位置是否合法
+    if( ret != NULL && (0 <= pos) && (pos< sList->length))
+    {
+        // 3. 取出删除元素
+        // ret = sList->node[pos];
+
+        // 4. 把删除位置pos后的元素分别向前移动一个位置
+        for(i=pos+1; i<sList->length; i++)
+        {
+            sList->node[i-1] = sList->node[i];
+        }
+
+        // 5. 长度减1
+        sList->length--;
+    }
+
+    return ret;
+}
+
+/*******************************************************************
+* 删除从i 至k 顺序表结点
+********************************************************************/
+//从有序顺序表中删除其值在给定值s与t之间（要求s小于t）的所有元素。
+//先找到值 ≥ i 的第一个元素，再找到值<k 的第一个元素，
+//然后将后面的元素前移，填补被删除元素的位置。
+SeqListNode* SeqList_Delete_I_to_K(SeqList* a, int i, int k)        // O(n)
+{
+    TSeqList* L = (TSeqList*)a;
+    //删除顺序表L中值在给定值s与t之间（要求s<t）的所有元素
+    int j;
+    //线性表为空或s、t不合法
+    if (L->length!=0 && i<=k)
+    {
+        for(j=i+k;j<=L->length;j++){
+            L->node[j-k-1]=L->node[j-1];
+        }
+        L->length-=k;
+    }
+}
+
 int SeqList_Length(SeqList* list) // O(1)
 {
     TSeqList* sList = (TSeqList*)list;
@@ -132,6 +181,7 @@ void SeqList_Reverse(SeqList* list)                      //O(n)
         }
     }
 }
+
 void main()
 {
     SeqList* list = SeqList_Create(5);
@@ -156,14 +206,50 @@ void main()
 
         printf("%d ", *p);
     }
+    /*
+    * 第一题  链表反转
+    */
     SeqList_Reverse(list);
-
-    printf("\n反转:");
+    printf("\nReverse:");
     for(index=0; index<SeqList_Length(list); index++)
     {
         int* p = (int*)SeqList_Get(list, index);
+        printf("%d ", *p);
+    }
 
+    /*
+     * 第二题
+     * 从顺序存储结构的线性表a中删除第i个元素起的k个元素。
+     */
+
+    SeqList_Delete_I_to_K(list,1,4);
+    printf("\nDell 1--> 4: ");
+    for(index=0; index<SeqList_Length(list); index++)
+    {
+        int* p = (int*)SeqList_Get(list, index);
+        printf("%d ", *p);
+    }
+
+    printf("\n删除链表元素: ");
+    while(SeqList_Length(list)>0)
+    {
+        int* p = (int*)SeqList_Delete(list,0);
         printf("%d ", *p);
     }
     SeqList_Destroy(list);
+
+
+
+
+    /*
+     * 第三题
+     * 试写出逆转线性单链表的算法。
+     */
+
+
+    /*
+     * 第三题
+     * 已知线性表中的元素非递减有序排列，并以带头结点的单链表作存储结构。试写一高效的算法，删除表中所有值相同的多余元素。
+     */
+
 }
