@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1488804336 source:c:\users\administrator\desktop\school\dstruct\task\3.3\seqlist.c
+	<stdio.h>
+	<malloc.h>
+	"SeqList.h"
+
+1488803796 c:\users\administrator\desktop\school\dstruct\task\3.3\seqlist.h
+
+1488809837 source:c:\users\administrator\desktop\school\dstruct\task\3.3\main.c
+	<stdio.h>
+	<malloc.h>
+	"SeqList.h"
+	"LinkList.h"
+
+1488803796 c:\users\administrator\desktop\school\dstruct\task\3.3\seqlist\seqlist.h
+
+1488809781 source:c:\users\administrator\desktop\school\dstruct\task\3.3\linklist.c
+	<stdio.h>
+	<malloc.h>
+	"LinkList.h"
+
+1488809719 c:\users\administrator\desktop\school\dstruct\task\3.3\linklist.h
+
