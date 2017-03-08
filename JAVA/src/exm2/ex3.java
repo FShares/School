@@ -1,4 +1,9 @@
+package exm2;
 public class ex3 {
+
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int i,n,k=0;
@@ -8,6 +13,7 @@ public class ex3 {
 				if (n%i==0)  break;  //若能整除说明n不是素数，跳出当前循环
 				i++;
 			}
+
 
 			if (i==n) {     //如果i==n则说明n不能被2~n-1整除，是素数
 				k++;             //统计输出数的个数
