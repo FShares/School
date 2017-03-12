@@ -1,12 +1,12 @@
 # depslib dependency file v1.0
-1488680762 source:c:\users\administrator\desktop\school\dstruct\0.linked list\sequential list\smain.c
+1489124649 source:c:\users\administrator\desktop\school\dstruct\0.linked list\sequential list\smain.c
 	<stdio.h>
 	<stdlib.h>
 	"SeqList.h"
 
-1488681012 c:\users\administrator\desktop\school\dstruct\0.linked list\sequential list\seqlist.h
+1489124649 c:\users\administrator\desktop\school\dstruct\0.linked list\sequential list\seqlist.h
 
-1488680352 source:c:\users\administrator\desktop\school\dstruct\0.linked list\sequential list\seqlist.c
+1489124649 source:c:\users\administrator\desktop\school\dstruct\0.linked list\sequential list\seqlist.c
 	<stdio.h>
 	<malloc.h>
 	"SeqList.h"
