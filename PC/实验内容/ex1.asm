@@ -1,0 +1,23 @@
+DATAS SEGMENT
+    ;此处输入数据段代码  
+DATAS ENDS
+
+STACKS SEGMENT
+    ;此处输入堆栈段代码
+STACKS ENDS
+
+CODES SEGMENT
+    ASSUME CS:CODES,DS:DATAS,SS:STACKS
+START:
+    MOV AX,DATAS
+    MOV DS,AX
+    ;编写程序，在屏幕上输出一个大写字母‘A’。
+    MOV DL,'A'
+ 	MOV AH,02H	;AH<-功能号调用02H
+ 	INT 21H		;显示->AL中的字符
+    MOV AH,4CH
+    INT 21H
+CODES ENDS
+    END START
+
+
