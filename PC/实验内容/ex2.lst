@@ -1,0 +1,65 @@
+Microsoft (R) Macro Assembler Version 6.11		    04/12/17 09:52:24
+tempfile.asm						     Page 1 - 1
+
+
+				;设有三个字节变量A，B，D，求表达式Y=（2（A+B）+D）/2的值，
+				;y=(2(2+4)+6)2 = 9
+				;并将结果存放至内存Y单元中。
+ 0000				DATAS SEGMENT			;数据段开始，DATAS为段名，表示该段地址
+ 0000 02			A db 2				
+ 0001 04			B db 4
+ 0002 06			D db 6	
+ 0003  0001 [			Y db 1 dup(?)			
+        00
+       ]
+ 0004				DATAS ENDS
+
+ 0000				STACKS SEGMENT
+				    ;此处输入堆栈段代码
+ 0000				STACKS ENDS
+
+ 0000				CODES SEGMENT
+				    ASSUME CS:CODES,DS:DATAS,SS:STACKS
+ 0000				START:
+ 0000  B8 ---- R		    MOV AX,DATAS
+ 0003  8E D8			    MOV DS,AX
+				    
+ 0005  A0 0000 R		    MOV AL,A				;AL<-A
+ 0008  02 06 0001 R		    ADD AL,B				;AL<-A+B
+ 000C  D0 E0			    SHL AL,1				;算术左移一次，目的操作数AL乘2
+ 000E  02 06 0002 R		    ADD AL,D				;AL<-AL+D
+ 0012  D0 E8			    SHR AL,1				;算术右移一次，目的操作数AL除2
+ 0014  A2 0003 R		    MOV Y,AL				;Y
+				    
+ 0017  B4 4C			    MOV AH,4CH
+ 0019  CD 21			    INT 21H
+
+ 001B				CODES ENDS
+				    END START
+Microsoft (R) Macro Assembler Version 6.11		    04/12/17 09:52:24
+tempfile.asm						     Symbols 2 - 1
+
+
+
+
+Segments and Groups:
+
+                N a m e                 Size     Length   Align   Combine Class
+
+CODES  . . . . . . . . . . . . .	16 Bit	 001B	  Para	  Private 
+DATAS  . . . . . . . . . . . . .	16 Bit	 0004	  Para	  Private 
+STACKS . . . . . . . . . . . . .	16 Bit	 0000	  Para	  Private 
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+A  . . . . . . . . . . . . . . .	Byte	 0000	  DATAS	
+B  . . . . . . . . . . . . . . .	Byte	 0001	  DATAS	
+D  . . . . . . . . . . . . . . .	Byte	 0002	  DATAS	
+START  . . . . . . . . . . . . .	L Near	 0000	  CODES	
+Y  . . . . . . . . . . . . . . .	Byte	 0003	  DATAS	
+
+	   0 Warnings
+	   0 Errors
