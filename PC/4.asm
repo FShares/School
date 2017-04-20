@@ -1,0 +1,35 @@
+DATAS SEGMENT
+BUF DB 1H,6H,41H,3H,5H,7H
+COUNT EQU $-BUF		;求BUF的长度
+JIEGUO DB 0H,0H,0H	;定义3个字节空间
+DATAS ENDS
+
+CODES SEGMENT
+    ASSUME CS:CODES,DS:DATAS
+START:
+;循环结构：判断数据段中BUF开始的若干个字节数据是小于6、等于6还是大于6？
+;分别转向DAYU、DENGYU和XIAOYU三个分支分别进行处理，
+;把小于、等于和大于的个数分别存入数据段JIEGUO开始的三个字节中。
+    MOV AX,DATAS
+    MOV DS,AX    
+    MOV CX,COUNT
+    MOV BX,00H;存放BUF的下标
+NEXT:MOV AL,BUF[BX]
+	CMP AL,06H
+	JC DAYU;小于6
+	JZ DENGYU;等于
+	JNC XIAOYU;大于	
+DAYU: MOV SI,00;小于
+	JMP more
+DENGYU:MOV SI,01 ;等于
+	JMP more
+XIAOYU:MOV SI,02 ;大于
+
+more: INC BYTE PTR JIEGUO[SI] 
+	INC BX
+	LOOP NEXT   
+    MOV AH,4CH
+    INT 21H
+CODES ENDS
+    END START
+
