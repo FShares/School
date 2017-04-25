@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
-<班级>
+<?xml version="1.0" encoding="utf-8" standalone="no"?><班级>
 	<学生 id="a001">
-		<名字>张三</名字>
+		<名字 sx="lxl">李小龙</名字>
 		<年龄>23</年龄>
 		<介绍>学习刻苦</介绍>
 	</学生>

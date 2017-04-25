@@ -21,7 +21,7 @@ public class dom_traversal {
 		DocumentBuilder dBuilder = dbf.newDocumentBuilder();
 		// 指定需要解析的XML文件
 		Document document = dBuilder.parse("src/class.xml");
-		//readXML(document);
+		readXML(document);
 		// list(document);
 		// read(document);
 		// add(document);
