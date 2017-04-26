@@ -13,7 +13,7 @@ START:
     MOV AX,DATAS
     MOV DS,AX    
     MOV CX,COUNT
-    MOV BX,00H;存放BUF的下标
+    MOV BX,00H		;存放BUF的下标
 NEXT:MOV AL,BUF[BX]
 	CMP AL,06H
 	JC DAYU;小于6
