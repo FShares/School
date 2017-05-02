@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<country xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="tihuan.xsd">
+<England>
+  <name>John Smith</name>
+</England>
+<China>
+<name>韩梅梅</name>
+<age>24</age>
+</China>
+</country>
+<!-- 根据tihuan.xml，使用元素替换substitutionGroup属性写出有效的Schema -->

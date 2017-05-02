@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:simpleType name="deci">
+		<xs:restriction base="xs:decimal">
+			<xs:totalDigits value="6"/>
+			<xs:fractionDigits value="3"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="str">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="2"/>
+			<xs:maxLength value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="dat">
+		<xs:restriction base="xs:date"/>
+	</xs:simpleType>
+	<xs:simpleType name="unionDD">
+		<xs:union memberTypes="deci str dat"/>
+	</xs:simpleType>
+	<xs:simpleType name="Eunion">
+		<xs:restriction base="unionDD">
+			<xs:enumeration value="2017-11-21"/>
+			<xs:enumeration value="string"/>
+			<xs:enumeration value="12.34"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="union" type="Eunion"/>
+</xs:schema>
