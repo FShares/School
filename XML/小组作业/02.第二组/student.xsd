@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="学生">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="姓名">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="2"/>
+							<xs:maxLength value="10"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="性别">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:length value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="年龄">
+					<xs:simpleType>
+						<xs:restriction base="xs:int">
+							<xs:minInclusive value="0"/>
+							<xs:maxInclusive value="100"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="身高">
+					<xs:simpleType>
+						<xs:restriction base="xs:decimal">
+							<xs:totalDigits value="5"/>
+							<xs:fractionDigits value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="院系" type="xs:string"/>
+				<xs:element name="爱好">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="打排球"/>
+							<xs:enumeration value="看书"/>
+							<xs:enumeration value="跑步"/>
+							<xs:enumeration value="踢足球"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="入学年份">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:pattern value="2\d{3}"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="专业" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+</xs:schema>

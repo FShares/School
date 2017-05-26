@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class>
+<stu id='a001'>
+<name>张三</name>
+<sex>男</sex>
+<age>30</age>
+</stu>
+<stu id="a002">
+<name>小红</name>
+<sex>女</sex>
+<age>26</age>
+</stu>
+</class>

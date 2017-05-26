@@ -1,0 +1,4 @@
+INDEX VERSION 1.126+D:\Users\Zhen Ni\Workspaces\MyEclipse for Spring 10\.metadata\.plugins\org.eclipse.jdt.core
+1918421811.index
+1678436340.index
+3271193799.index

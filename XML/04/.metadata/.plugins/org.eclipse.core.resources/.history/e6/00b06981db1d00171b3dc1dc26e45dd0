@@ -1,0 +1,25 @@
+package com.saxtest;
+
+import javax.xml.parsers.*;
+
+import org.xml.sax.SAXException;
+
+public class saxtest {
+
+	//使用SAX技术解析XML文件-saxclass.xml
+	public static void main(String[] args) throws Exception, SAXException {
+		// TODO Auto-generated method stub
+		//创建SaxParserFactory
+		SAXParserFactory spf=SAXParserFactory.newInstance();
+		//创建SaxParser解析器
+		SAXParser saxParser=spf.newSAXParser();
+		//把XML文件和事件处理对象关联起来
+		saxParser.parse("src/saxclass.xml", dh)
+
+
+
+	}
+
+}
+//定义事件处理类
+class MyHandler extends DefaultHandler{}

@@ -1,0 +1,13 @@
+<!ELEMENT 班级 (学生+)>
+<!ENTITY % name "名字">
+ <!ELEMENT 学生 (%name;,年龄,介绍)>
+ <!ATTLIST 学生
+ 面积 CDATA #FIXED "100平方"
+ 学号 ID #REQUIRED
+ 好友 IDREFS #REQUIRED
+ 性别 (男|女) #REQUIRED
+ >
+ <!ELEMENT 名字 (#PCDATA)>
+ <!ELEMENT 年龄 (#PCDATA)>
+ <!ELEMENT 介绍 (#PCDATA)>
+ <!ENTITY copyright "版权所有">

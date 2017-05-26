@@ -1,0 +1,20 @@
+<html>
+<head>
+<script language="javascript">
+<!--
+    //创建xml文档解析器对象
+	var xmldoc = new ActiveXObject("Microsoft.XMLDOM");
+	//开启xml校验
+    xmldoc.validateOnParse = "true";
+	//装载xml文档
+    xmldoc.load("tvshow.xml");
+    //指出错误信息
+	document.writeln("错误信息为："+xmldoc.parseError.reason+"<br/>"); 
+	//指出错误的行号
+	document.writeln("错误的行为："+xmldoc.parseError.line);
+//-->
+</script>
+</head>
+<body>
+</body>
+</html>

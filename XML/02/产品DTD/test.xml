@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE CATALOG SYSTEM "product.dtd">
+<CATALOG>
+<PRODUCT NAME="华为" CATEGORY="HandTool" PARTNUM="a001" PLANT="Milwaukee" INVENTORY="Discontinued">
+<SPECIFICATIONS WEIGHT="500g" POWER="500">产品细节</SPECIFICATIONS>
+ <PRICE>产品价格</PRICE>
+</PRODUCT>
+</CATALOG>

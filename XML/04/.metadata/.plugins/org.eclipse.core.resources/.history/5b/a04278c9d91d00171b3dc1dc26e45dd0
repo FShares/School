@@ -1,0 +1,11 @@
+package com.saxtest;
+
+public class saxtest {
+
+	//使用SAX技术解析XML文件-saxclass.xml
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

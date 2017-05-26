@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE NEWSPAPER SYSTEM "newspaper.dtd">
+<NEWSPAPER>
+<ARTICLE AUTHOR="张三" EDITOR="李四" DATE="03/14/2017" EDITION="1.0">
+<HEADLINE>数据挖掘导论</HEADLINE>
+<BYLINE>TOM</BYLINE>
+<LEAD>JERRY</LEAD>
+<BODY>hello</BODY>
+<NOTES>expensive</NOTES>
+</ARTICLE>
+</NEWSPAPER>

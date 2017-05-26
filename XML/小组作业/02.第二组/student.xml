@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<学生 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="student.xsd">
+	<姓名>smile</姓名>
+	<性别>女</性别>
+	<年龄>24</年龄>
+	<身高>160.7</身高>
+	<院系>计算机</院系>
+	<爱好>打排球</爱好>
+	<入学年份>2014</入学年份>
+	<专业>计算机科学与应用</专业>
+</学生>

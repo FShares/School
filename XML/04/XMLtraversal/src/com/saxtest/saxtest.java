@@ -1,0 +1,80 @@
+package com.saxtest;
+
+import javax.xml.parsers.*;
+
+import org.xml.sax.Attributes;
+import org.xml.sax.SAXException;
+import org.xml.sax.helpers.DefaultHandler;
+
+public class saxtest {
+
+	//使用SAX技术解析XML文件-saxclass.xml
+	public static void main(String[] args) throws Exception, SAXException {
+		// TODO Auto-generated method stub
+		//创建SaxParserFactory
+		SAXParserFactory spf=SAXParserFactory.newInstance();
+		//创建SaxParser解析器
+		SAXParser saxParser=spf.newSAXParser();
+		//把XML文件和事件处理对象关联起来
+		saxParser.parse("src/saxclass.xml", new MyHandler());
+
+
+
+	}
+
+}
+//定义事件处理类
+class MyHandler extends DefaultHandler{
+
+	//发现文档开始
+	@Override
+	public void startDocument() throws SAXException {
+		// TODO Auto-generated method stub
+		System.out.println("发现文档开始");
+		super.startDocument();
+	}
+	
+	//发现XML文件中的一个元素
+	@Override
+	public void startElement(String uri, String localName, String qName,
+			Attributes attributes) throws SAXException {
+		// TODO Auto-generated method stub
+		System.out.println("元素名称="+qName);
+		super.startElement(uri, localName, qName, attributes);
+	}
+	
+	//发现XML中的文本	
+	@Override
+	public void characters(char[] ch, int start, int length)
+			throws SAXException {
+		// TODO Auto-generated method stub
+		super.characters(ch, start, length);
+		//加判断，有无空行
+		//显示文本内容
+		String con=new String(ch,start,length);		
+		if(!con.trim().equals("")){		
+		System.out.println(new String(ch,start,length));}
+	}
+	
+	//发现一个元素结束
+	@Override
+	public void endElement(String uri, String localName, String qName)
+			throws SAXException {
+		// TODO Auto-generated method stub
+		super.endElement(uri, localName, qName);
+	}
+
+    //发现整个文档结束
+	@Override
+	public void endDocument() throws SAXException {
+		// TODO Auto-generated method stub
+		System.out.println("发现文档结束");
+		super.endDocument();
+	}
+
+
+
+
+	
+	
+}

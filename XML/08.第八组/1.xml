@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<book-list xsi:noNamespaceSchemaLocation="1.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<book>
-		<name>string</name>
-		<writer>string</writer>
-	</book>
-</book-list>

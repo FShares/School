@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<favorite-list xsi:noNamespaceSchemaLocation="1.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<book isbn="0">
-		<name>Warcraft</name>
-		<price>0.0</price>
-	</book>
-</favorite-list>
