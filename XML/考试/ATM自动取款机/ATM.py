@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 #coding=utf8
 # tab completion
-import readline
-readline.parse_and_bind('tab: complete')
+# import readline
+# readline.parse_and_bind('tab: complete')
 # history file
-import os
-histfile = os.path.join(os.environ['HOME'], '.pythonhistory')
+#import os
+#histfile = os.path.join(os.environ['HOME'], '.pythonhistory')
 
 import fileinput
 import time
