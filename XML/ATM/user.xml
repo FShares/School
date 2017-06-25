@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<framework>
+    <list>
+        <userinfo Usex="男" balance="600" id="1" uPass="1">刘邦龙</userinfo>
+        <userinfo Usex="男" balance="200" id="2" uPass="2">王磊</userinfo>
+        <userinfo Usex="女" balance="500" id="3" uPass="3">小红</userinfo>
+    <userinfo Usex="女" balance="0" id="005" uPass="005">端木蓉</userinfo></list>
+</framework>
