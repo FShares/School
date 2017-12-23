@@ -1,0 +1,8 @@
+
+https://www.tutorialspoint.com/unix_sockets/index.htm
+http://blog.chinaunix.net/uid-11765716-id-218009.html
+
+
+
+基于linux的TCP网络聊天室设计与实现
+http://blog.csdn.net/qq_35260622/article/details/51643711
